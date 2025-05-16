@@ -2,9 +2,9 @@
 pragma solidity 0.8.30;
 
 contract Delete {
-    uint8[] private s_numbers;
+    uint256[] private s_numbers;
 
-    function addNumbers(uint8[] memory numbers) external {
+    function addNumbers(uint256[] memory numbers) external {
         for (uint256 i = 0; i < numbers.length; i++) {
             s_numbers.push(numbers[i]);
         }
@@ -25,10 +25,10 @@ contract Delete {
     // len(2):  15581
     // len(3):  20636
     function useNewArray() external {
-        s_numbers = new uint8[](0);
+        s_numbers = new uint256[](0);
     }
 
-    function getNumbers() external view returns (uint8[] memory) {
+    function getNumbers() external view returns (uint256[] memory) {
         return s_numbers;
     }
 
